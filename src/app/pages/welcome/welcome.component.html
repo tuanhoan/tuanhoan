@@ -1,26 +1,104 @@
-<!-- <div class="container row">
-  <h2>Button Groups Sizes</h2>
-  <p>Add class .btn-group-* to size all buttons in a button group.</p>
-  <h3>Large Buttons:</h3>
-  <div class="btn-group btn-group-lg">
-    <button type="button" class="btn btn-primary">Apple</button>
-    <button type="button" class="btn btn-primary">Samsung</button>
-    <button type="button" class="btn btn-primary">Sony</button>
-  </div>
-  <h3>Default Buttons:</h3>
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">Apple</button>
-    <button type="button" class="btn btn-primary">Samsung</button>
-    <button type="button" class="btn btn-primary">Sony</button>
-  </div>
-  <h3>Small Buttons:</h3>
-  <div class="btn-group btn-group-sm">
-    <button type="button" class="btn btn-primary">Apple</button>
-    <button type="button" class="btn btn-primary">Samsung</button>
-    <button type="button" class="btn btn-primary">Sony</button>
-  </div>
+<div nz-row nzJustify="center">
+  <nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+    <nz-card-meta nzTitle="Tuấn Hoàn" nzDescription="This is my project" [nzAvatar]="avatarTemplate"></nz-card-meta>
+  </nz-card>
+  <ng-template #avatarTemplate>
+    <nz-avatar
+      nzSrc="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.0-9/s960x960/108908994_865417183980586_3465735696966017242_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_ohc=cG0dF-WXoR0AX-xicAp&_nc_ht=scontent-hkg4-1.xx&tp=7&oh=124b77317de2ab2d32634a9a004ff433&oe=5F8DFEE7">
+    </nz-avatar>
+  </ng-template>
+  <ng-template #coverTemplate>
+    <img alt="example"
+      src="https://scontent.fvca1-2.fna.fbcdn.net/v/t1.15752-9/120093975_2941610089272845_4973677147199946437_n.png?_nc_cat=100&_nc_sid=b96e70&_nc_ohc=6NjUaZMKUVEAX-rm7ox&_nc_oc=AQn_EcBFbtXSUr6sJf5cpIN1QBakqgEzzoiYgjvB4o804_0xfazK_DOvBTdOqOCGVX8&_nc_ht=scontent.fvca1-2.fna&oh=43b173089fa70cca4fd69a01e60f60c8&oe=5F90C4C8" />
+  </ng-template>
+  <ng-template #actionSetting>
+    <i nz-icon nzType="setting"></i>
+  </ng-template>
+  <ng-template #actionEdit>
+    <i nz-icon nzType="edit"></i>
+  </ng-template>
+  <ng-template #actionEllipsis>
+    <i nz-icon nzType="ellipsis"></i>
+  </ng-template> 
+  <button nz-button nzType="primary" (click)="loadFacebook()" [nzLoading]="isLoadingOne">Facebook</button>
+
+  <button nz-button nzType="primary" (click)="loadZalo()" [nzLoading]="isLoadingTwo">Zalo</button>
+  
+  <button nz-button nzType="primary" (click)="loadInstagram()" [nzLoading]="isLoadingTwo">Instagram</button>
+  
+  <button nz-button nzType="primary" (click)="loadTiktok()" [nzLoading]="isLoadingTwo">TikTok</button>
+  
+  <button nz-button nzType="primary" (click)="loadSkype()" [nzLoading]="isLoadingOne">Skype</button>
+  
+  <button nz-button nzType="primary" (click)="loadTwitter()" [nzLoading]="isLoadingTwo">Twitter</button>
+  
+  <button nz-button nzType="primary" (click)="loadGmail()" [nzLoading]="isLoadingTwo">Gmail</button>
+  
+  <button nz-button nzType="primary" (click)="loadWechat()" [nzLoading]="isLoadingTwo">Wechat</button>
+  
+</div>
+
+<!-- 
+<div nz-col nzSpan="12">
+  <nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+    <nz-card-meta nzTitle="Tuấn Hoàn" nzDescription="This is my project" [nzAvatar]="avatarTemplate"></nz-card-meta>
+  </nz-card>
+  <ng-template #avatarTemplate>
+    <nz-avatar
+      nzSrc="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.0-9/s960x960/108908994_865417183980586_3465735696966017242_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_ohc=cG0dF-WXoR0AX-xicAp&_nc_ht=scontent-hkg4-1.xx&tp=7&oh=124b77317de2ab2d32634a9a004ff433&oe=5F8DFEE7">
+    </nz-avatar>
+  </ng-template>
+  <ng-template #coverTemplate>
+    <img alt="example"
+      src="https://qrcgcustomers.s3.eu-west-1.amazonaws.com/account10383276/qrcodes/26006075.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJB2HRMXMYBGR2KIQ%2F20200922%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200922T132553Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=e87091d0cac79233300f9fd7c28ae689617a2d4e028f77beaaf0b80840b9e351" />
+  </ng-template>
+  <ng-template #actionSetting>
+    <i nz-icon nzType="setting"></i>
+  </ng-template>
+  <ng-template #actionEdit>
+    <i nz-icon nzType="edit"></i>
+  </ng-template>
+  <ng-template #actionEllipsis>
+    <i nz-icon nzType="ellipsis"></i>
+  </ng-template>
+</div>
+<div nz-col nzSpan="12">
+  <br>
+  <button nz-button nzType="primary" (click)="loadFacebook()" [nzLoading]="isLoadingOne">Facebook</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadZalo()" [nzLoading]="isLoadingTwo">Zalo</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadInstagram()" [nzLoading]="isLoadingTwo">Instagram</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadTiktok()" [nzLoading]="isLoadingTwo">TikTok</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadFacebook()" [nzLoading]="isLoadingOne">Facebook</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadZalo()" [nzLoading]="isLoadingTwo">Zalo</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadInstagram()" [nzLoading]="isLoadingTwo">Instagram</button>
+  <br>
+  <button nz-button nzType="primary" (click)="loadTiktok()" [nzLoading]="isLoadingTwo">TikTok</button>
+  <br>
 </div> -->
 
-<h2><a target="_balnk" href="https://www.facebook.com/tuan.hoan.108">FB Profile</a></h2>
 
-<a target="_balnk" class="mobile" href="https://www.facebook.com/tuan.hoan.108">FaceBook</a>
+
+
+
+<!-- 
+<h2><a target="_balnk" href="fb://profile/100015369369316">FB Profile</a></h2>
+
+<a target="_balnk" class="mobile" href="fb://page/414453055238471">FaceBook</a>
+
+<a href="https://facebook.com/tuan.hoan.108" class="large-screen">Clicky</a> -->
+<!-- <p>--------------</p>
+<h1><a target="_balnk" href="fb://profile/100015369369316">FACEBOOK</a></h1>
+<h1><a target="_balnk" href="https://zalo.me/84948502258" class="small-screen">ZALO</a></h1>
+<h1><a target="_balnk" href="instagram://user?username=tuanhoanmd" class="small-screen">INSTAGRAM</a></h1>
+<h1><a target="_balnk" href="https://www.tiktok.com/@tuanhoanht" class="small-screen">TIKTOK</a></h1>
+<h1><a target="_balnk" href="https://zalo.me/84962432768" class="small-screen">SKYPE</a></h1>
+<h1><a target="_balnk" href="twitter://profile/tuanhoan" class="small-screen">TWITTER</a></h1>
+<h1><a target="_balnk" href="https://m.me/100015369369316" class="small-screen">MESSENGER</a></h1>
+<h1><a target="_balnk" href="https://zalo.me/84962432768" class="small-screen">ZALO</a></h1>
+ -->

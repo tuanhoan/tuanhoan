@@ -5,11 +5,75 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './monitor.component.html',
   styleUrls: ['./monitor.component.less']
 })
-export class MonitorComponent implements OnInit {
-    array = ["Nguyễn Tuấn Anh", "Nguyễn Thị Ánh Sương", "Lâm Kiều My", "Trình Hoàng Lương", "Lê Quyết Chiến"]; 
-    brray = ["https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-1.2.1&w=1000&q=80", "https://cdn.wallpapersafari.com/72/11/MecWJT.jpg", "https://images.unsplash.com/photo-1541423408854-5df732b6f6d1?ixlib=rb-1.2.1&w=1000&q=80", "https://i.pinimg.com/originals/2f/88/0e/2f880ef2e1761ec234bf68cba9e7f3bb.jpg", "https://4.bp.blogspot.com/-Tn42Xj78wc4/VHE6xfU9pNI/AAAAAAAAGuo/JQJ6jBuMRyk/s1600/Wallpaper%2B-%2BM%E1%BB%97i%2BNg%C3%A0y%2B5%2BH%C3%ACnh%2BN%E1%BB%81n%2BM%C3%A1y%2BT%C3%ADnh%2BFull%2BHD%2B%231%2B2.jpg"];
+export class MonitorComponent implements OnInit { 
+  isLoadingOne = false;
+  isLoadingTwo = false;
+  isLoadingThree = false;
+  isLoadingFour = false;
+  isLoadingFive = false;
+  isLoadingSix = false;
+  isLoadingSeven = false;
+  isLoadingEight = false;
+
+  loadFacebook(): void {
+    this.isLoadingOne = true;
+    setTimeout(() => {
+      this.isLoadingOne = false;
+    }, 5000);
+    window.open("fb://profile/100015369369316");
+  }
+
+  loadZalo(): void {
+    this.isLoadingTwo = true;
+    setTimeout(() => {
+      this.isLoadingTwo = false;
+    }, 5000);
+    window.open("https://zalo.me/84948502258");
+  }
+  loadInstagram(): void {
+    this.isLoadingThree = true;
+    setTimeout(() => {
+      this.isLoadingThree = false;
+    }, 5000);
+    window.open("instagram://user?username=tuanhoanmd");
+  }
+  loadTiktok(): void {
+    this.isLoadingFour = true;
+    setTimeout(() => {
+      this.isLoadingFour = false;
+    }, 5000);
+    window.open("https://zalo.me/84948502258");
+  }
+  loadSkype(): void {
+    this.isLoadingFive = true;
+    setTimeout(() => {
+      this.isLoadingFive = false;
+    }, 5000);
+    window.open("https://zalo.me/84948502258");
+  }
+  loadWechat(): void {
+    this.isLoadingSix = true;
+    setTimeout(() => {
+      this.isLoadingSix = false;
+    }, 5000);
+    window.open("https://icq.com/people/ICQIDgoeshere");
+  }
+  loadGmail(): void {
+    this.isLoadingSeven = true;
+    setTimeout(() => {
+      this.isLoadingSeven = false;
+    }, 5000);
+    window.open("#");
+  }
+  loadTwitter(): void {
+    this.isLoadingEight = true;
+    setTimeout(() => {
+      this.isLoadingEight = false;
+    }, 5000);
+    window.open("twitter://profile/tuanhoan");
+  }
   constructor() { }
-  
+
   ngOnInit() {
   }
 

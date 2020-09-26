@@ -26,8 +26,7 @@ const routes: Routes = [
     NzFormModule,
     NgZorroAntdModule,
     ReactiveFormsModule,
-    NzIconModule,
-    CardModule, 
+    NzIconModule, 
 
     
   ],

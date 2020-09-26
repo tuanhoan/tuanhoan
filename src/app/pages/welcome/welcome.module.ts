@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { CardModule } from '../card/card.module';
+import { NzAvatarModule, NzCardModule, NzGridModule } from 'ng-zorro-antd';
 
 const routes: Routes = [{ path: '', component: WelcomeComponent }];
 
@@ -21,6 +22,9 @@ const routes: Routes = [{ path: '', component: WelcomeComponent }];
     FormsModule,
     NzButtonModule,
     NzRadioModule,
+    NzAvatarModule, 
+    NzCardModule,
+    NzGridModule
   ],
   declarations: [WelcomeComponent],
   exports: [RouterModule],
